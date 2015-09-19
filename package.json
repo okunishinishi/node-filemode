@@ -1,13 +1,17 @@
 {
   "name": "filemode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Change file permissions",
   "main": "lib",
   "scripts": {
     "test": "./ci/test.js"
   },
   "repository": "okunishinishi/node-filemode",
-  "keywords": [],
+  "keywords": [
+    "file",
+    "permission",
+    "mode"
+  ],
   "author": {
     "name": "okunishinishi",
     "email": "okunishitaka.com@gmail.com",
