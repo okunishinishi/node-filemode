@@ -4,13 +4,14 @@
  * @version {{pkg.version}}
  */
 
-"use strict";
+'use strict'
 
-var filemode = require('./filemode'),
-    pkg = require('../package.json');
+const filemode = require('./filemode')
+const pkg = require('../package.json')
 
-var lib = filemode.bind(this);
-lib.version = pkg.version;
-lib.filemode = filemode;
+let lib = filemode.bind(this)
 
-module.exports = lib;
+lib.version = pkg.version
+lib.filemode = filemode
+
+module.exports = lib

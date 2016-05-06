@@ -1,39 +1,35 @@
 /**
  * Test case for filemode.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var filemode = require('../lib/filemode.js'),
-    fs = require('fs'),
-    mkdirp = require('mkdirp');
+const filemode = require('../lib/filemode.js')
+const fs = require('fs')
+const mkdirp = require('mkdirp')
+const co = require('co')
 
-var tmpDir = __dirname + '/../tmp';
+let tmpDir = __dirname + '/../tmp'
 
-exports.setUp = function (done) {
-    mkdirp.sync(tmpDir);
-    done();
-};
+describe('filemode', () => {
+  before(() => co(function * () {
+    mkdirp.sync(tmpDir)
+  }))
 
-exports.tearDown = function (done) {
-    done();
-};
+  after(() => co(function * () {
+  }))
 
-exports['Filemode'] = function (test) {
-    filemode(__filename, '644', function (err) {
-        test.ifError(err);
-        filemode({
-            '*.txt': '644'
-        }, {cwd: tmpDir}, function (err) {
-            fs.writeFileSync(tmpDir + '/foo.txt', 'foo');
-            fs.writeFileSync(tmpDir + '/bar.txt', 'bar');
-            test.ifError(err);
-            filemode({
-                '*.txt': '444'
-            }, {cwd: tmpDir}, function (err) {
-                test.ifError(err);
-                test.done();
-            });
-        });
-    });
-};
+  it('Filemode', () => co(function * () {
+    yield filemode(__filename, '644')
+    yield filemode({
+      '*.txt': '644'
+    }, { cwd: tmpDir })
+    fs.writeFileSync(tmpDir + '/foo.txt', 'foo');
+    fs.writeFileSync(tmpDir + '/bar.txt', 'bar');
+    yield filemode({
+      '*.txt': '444'
+    }, { cwd: tmpDir })
+  }))
+})
 
+/* global describe, before, after, it */

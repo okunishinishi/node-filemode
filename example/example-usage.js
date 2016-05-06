@@ -1,5 +1,7 @@
-var filemode = require('filemode');
+'use strict'
 
-filemode('ci/*.sh', '755', function (err) {
-    /*...*/
-});
+const filemode = require('filemode')
+
+filemode('ci/*.sh', '755').then(() => {
+  /* ... */
+})
