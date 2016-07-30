@@ -1,6 +1,6 @@
 {
   "name": "filemode",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Change file permissions",
   "main": "lib",
   "scripts": {
@@ -29,11 +29,9 @@
   },
   "devDependencies": {
     "amocha": "^1.0.10",
-    "ape-covering": "^3.0.4",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.8",
-    "ape-testing": "^4.0.2",
     "ape-tmpl": "^5.0.15",
     "ape-updating": "^4.0.5",
     "coz": "^6.0.16",
@@ -41,7 +39,7 @@
     "mkdirp": "^0.5.1"
   },
   "engines": {
-    "node": ">=6.0",
-    "npm": ">=6.0"
+    "node": ">=6",
+    "npm": ">=3"
   }
 }
