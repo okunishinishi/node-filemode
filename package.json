@@ -1,6 +1,6 @@
 {
   "name": "filemode",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Change file permissions",
   "main": "lib",
   "scripts": {
@@ -23,23 +23,21 @@
   },
   "homepage": "https://github.com/okunishinishi/node-filemode#readme",
   "dependencies": {
-    "aglob": "^1.0.1",
-    "argx": "^3.0.0",
-    "co": "^4.6.0"
+    "aglob": "^3.0.1",
+    "argx": "^4.0.0"
   },
   "devDependencies": {
-    "amocha": "^1.0.10",
-    "ape-releasing": "^4.0.4",
-    "ape-reporting": "^3.0.1",
+    "amocha": "^5.0.1",
+    "ape-releasing": "^5.0.1",
     "ape-tasking": "^4.0.8",
-    "ape-tmpl": "^5.0.15",
-    "ape-updating": "^4.0.5",
-    "coz": "^6.0.16",
+    "ape-tmpl": "^6.0.12",
+    "ape-updating": "^5.0.1",
+    "coz": "^7.0.8",
     "injectmock": "^2.0.0",
     "mkdirp": "^0.5.1"
   },
   "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+    "node": ">=8",
+    "npm": ">=5"
   }
 }
